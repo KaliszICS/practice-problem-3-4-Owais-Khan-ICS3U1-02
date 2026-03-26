@@ -2,7 +2,7 @@
 	* Lesson: Nested Ifs
 	* Author: Mr. Kalisz
 	* Date Created: March 23, 2023
-	* Date Last Modified: March 23, 2023
+	* Date Last Modified: March 26, 2026
 	*/
 
 import java.util.Scanner;
@@ -25,7 +25,7 @@ class Note {
 
 		// if (num > 5) {
 		// 	if (num < 8) {
-		// 		//num > 5 and num < 8
+		// 		//num > 5 && num < 8
 		// 		System.out.println("Here");
 		// 	}
 		// }
@@ -37,13 +37,13 @@ class Note {
 
 
 		//Option one: Executing code between conditions
-		if (num > 5) {
-			System.out.println("5"); //runs when its greater than 5, and happens between the two conditions
-			if (num < 8) { //runs only when both conditions are true
-				//num > 5 and num < 8
-				System.out.println("Here");
-			}
-		}
+		// if (num > 5) {
+		// 	System.out.println("5"); //runs when its greater than 5, and happens between the two conditions
+		// 	if (num < 8) { //runs only when both conditions are true
+		// 		//num > 5 and num < 8
+		// 		System.out.println("Here");
+		// 	}
+		// }
 
 		//Option 2: Repeated conditions
 		//Rather than repeat num > 1, 3+ times
@@ -62,7 +62,7 @@ class Note {
 		// 	System.out.println("Not plural");
 		// }
 
-		if (word > 1) {
+		if (num > 1) {
 			if (word.endsWith("y")) {
 				System.out.println("ies");
 			}
@@ -80,5 +80,33 @@ class Note {
 		
 		//nested vs compound booleans
 		//faster vs slower
+
+
+		//nesting should not go further than 3 levels in
+		if (num > 7) {
+			if (num < 5) {
+				if (num == 6) {
+					if (true) {
+						if (false) {
+							if(true) {
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//Theres always two ways to look at a condition
+
+		if (num > 5) {
+
+		}
+
+		//alternatively
+
+		if (!(num <= 5)) {
+
+		}
 	}
 }
