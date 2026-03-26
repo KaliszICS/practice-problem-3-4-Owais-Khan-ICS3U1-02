@@ -19,5 +19,6 @@ public class PracticeProblem {
 	     if (num%4 && (!num%100 || num%400)) {
 	         return true;
 	     return false;
+		 }
 	}
 }
